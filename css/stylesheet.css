@@ -8,120 +8,193 @@
 /* Basic styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(51, 51, 51, 0.8);
-    padding: 10px 0;
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
-.navbar ul {
+.navbar .logo img {
+    width: 2rem;
+    max-width: 300px;
+}
+
+.nav-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.navbar li {
-    display: inline;
-    margin: 0 20px;
+.nav-list li {
+    margin: 0 10px;
 }
 
-.navbar a {
+.nav-list a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: black;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
+.nav-list a:hover {
+    color: #f5f5f5;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 .hero {
-    background-image: url('hero-image.jpg'); /* Replace with your image URL */
+    background-image: url('../img/hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #fff;
     text-align: center;
-    padding: 200px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 3.375rem;
+    margin-bottom: 1rem;
+}
+
+.hero h3 {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 635px;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6600;
+    padding: 1rem 3rem;
+    background-color: #70B943;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 75px;
 }
 
 .cta-button:hover {
     background-color: #ff3300;
 }
 
-.benefits {
+.players-section {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
-    justify-content: space-around;
-    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
 }
 
-.benefit {
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; 
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    max-width: 300px;
-    flex: 1; /* Take up full width on small screens */
-    margin: 10px; /* Add some space between items */
+    padding: 30px;
+    background-color: #D8E3F2;
+    border-radius: 30px;
 }
 
-.benefit img {
-    max-width: 100%;
+.playerimg {
+    width: 20vw;
+    position: relative;
+    padding-top: 100%;
+}
+
+.mbappeframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 100%;
+    background-image: url('../img/mbappe.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
 }
 
 .subscribe {
-    background-color: #f5f5f5;
-    text-align: center;
-    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
-.subscribe h2 {
-    font-size: 2rem;
+.subscribediv {
+    background-color: black;
+    border-radius: 30px;
+    width: 80vw;
+    max-width: 800px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.subscribediv h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subscribediv p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* Media query for screens smaller than 768px (typical mobile devices) */
 @media (max-width: 768px) {
-    header {
-        padding: 60px 0;
-    }
 
     .hero h1 {
         font-size: 2rem;
     }
 
-    .benefit {
+    .player {
         max-width: 100%;
     }
 
-    .benefit img {
+    .playerimg {
         max-width: 100%;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
     }
 }
