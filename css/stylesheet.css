@@ -128,11 +128,14 @@ header {
     padding-top: 6rem;
     padding-bottom: 3rem;
     background-color: #213A0E;
+    background-image: url('../img/bg2.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .players-section h1 {
     margin-bottom: 0.5rem;
-    color: #C8ED86;
+    color: white;
 }
 
 .players-section h3 {
@@ -255,7 +258,10 @@ header {
     justify-content: center;
     padding-top: 3rem;
     padding-bottom: 6rem;
-    background-color: #213A0E;
+    background-color: #C0D4B2;
+    background-image: url('../img/bg1.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .subscribediv {
@@ -282,7 +288,7 @@ header {
 }
 
 footer {
-    background-color: #7B9946;
+    background-color: #C0D4B2;
     color: #213A0E;
     text-align: center;
     display: flex;
